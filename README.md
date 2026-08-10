@@ -38,6 +38,12 @@ My write-ups for the boxes and challenges I've worked through - how I enumerated
 | [Identifying and Exploiting Server-Side Includes Injection](./HTB%20Identifying%20and%20Exploiting%20Server-Side%20Includes%20Injection%20CTF%20Writeup/README.md) | HTB Academy| Easy | SSI injection, .shtml detection, #printenv confirmation, #exec RCE, path traversal |
 | [Identifying and Exploiting an XSLT Injection](./HTB%20Identifying%20and%20Exploiting%20an%20XSLT%20Injection%20CTF%20Writeup/README.md) | Hack The Box | Easy | XSLT injection, system-property fingerprinting, libxslt, php:function, file_get_contents LFI, system() RCE |
 
+### File Upload Attacks
+| Box | Platform | Difficulty | Key techniques |
+|-----|----------|------------|----------------|
+| [File Upload Exploitation Using a Web Shell](./HTB%20File%20Upload%20Exploitation%20Using%20a%20Web%20Shell%20Lab%20Writeup/README.md) | Hack The Box Academy | Easy | File upload, PHP web shell, msfvenom, backend fingerprinting, path traversal |
+
+
 ## Defensive Security
 | Box | Platform | Difficulty | Key techniques |
 |-----|----------|------------|----------------|
