@@ -16,26 +16,27 @@ This lab tells us that there is a file upload vulnerability at the given IP addr
 
 ## Assessment Overview
 
+ 
 ```mermaid
 flowchart LR
     A[Employee File Manager<br/>upload page<br/>image-only check]:::entry
-
+ 
     A --> B[Method 1<br/>Burp Suite]:::payload
     A --> C[Method 2<br/>front end source]:::intel
-
+ 
     B --> B1[Intercept the<br/>POST request]:::payload
     B1 --> B2[Swap image for<br/>PHP web shell<br/>in Repeater]:::payload
     B2 --> B3[File successfully<br/>uploaded]:::user
-
+ 
     C --> C1[Create shell.php]:::intel
-    C1 --> C2[Inspect source,<br/>find validate&#40;&#41;]:::intel
+    C1 --> C2[Inspect source,<br/>find validate check]:::intel
     C2 --> C3[Remove client side<br/>validation]:::intel
     C3 --> C4[Upload PHP<br/>directly]:::user
-
+ 
     B3 --> D[Web shell<br/>shell.php?cmd=<br/>RCE as www-data]:::mitre
     C4 --> D
     D --> E[Read flag.txt]:::user
-
+ 
     classDef entry fill:#1d4ed8,stroke:#1e3a8a,color:#ffffff;
     classDef ioc fill:#0f766e,stroke:#134e4a,color:#ffffff;
     classDef intel fill:#7c3aed,stroke:#5b21b6,color:#ffffff;
@@ -44,6 +45,7 @@ flowchart LR
     classDef user fill:#15803d,stroke:#14532d,color:#ffffff;
     linkStyle default stroke-width:2px
 ```
+
 
 ---
 
