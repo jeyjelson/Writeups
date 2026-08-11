@@ -46,14 +46,17 @@ flowchart LR
 
 ---
 
-## What I Learned
-
+# What I Learned
+ 
 - How a blacklist and a whitelist can run together on the same upload form, each covering the other's gaps.
 - Why a strict whitelist regex anchored with `$` defeats the classic double extension trick.
 - Using Burp Intruder to fuzz a large extension wordlist and read the response messages to tell which filter is blocking.
 - That comparing two different error messages ("Extension not allowed" versus "Only images are allowed") reveals which extension slips past the blacklist.
 - Abusing a reverse double extension like `shell.phar.jpg` so the filename passes both filters while Apache still executes it as PHP.
-- Chaining a bypass into a working webshell to get command execution as `www-data` and read the flag.
+- Recognising that a file uploading successfully only means it passed the filters, and that whether it runs as PHP is a separate gate I can only confirm by visiting the file and checking if my command actually executes.
+- Working out why extensions like `.phtm` and `.pgif` upload but stay dead, because Apache's handler regex does not match them even though they slipped past the filters.
+- Learning that the null byte trick is a legacy bug patched back in PHP 5.3.4, so on a modern server the file just saves with its `.jpg` ending and never executes.
+
 
 ---
 
