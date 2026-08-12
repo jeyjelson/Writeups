@@ -19,22 +19,22 @@ We have been told in this exercise that there is a file upload vulnerability on 
 ```mermaid
 flowchart LR
     A[Target web app<br/>profile image upload]:::entry --> B[Intercept upload<br/>in Burp Suite]:::entry
-
+ 
     B --> C[Send to Intruder<br/>enumerate extensions]:::payload
-    C --> D[.phar passes blacklist<br/>&quot;Only images allowed&quot;]:::ioc
+    C --> D[.phar passes blacklist<br/>Only images allowed]:::ioc
     C --> E[.phar.jpg accepted<br/>double extension]:::ioc
-
+ 
     E --> F[Send to Repeater]:::payload
     F --> G[Add GIF8 magic bytes<br/>fake image content]:::payload
     G --> H[File uploaded<br/>but shell fails]:::mitre
-
+ 
     H --> I[Content-Type: image/gif<br/>still fails]:::mitre
     H --> J[Reverse double extension<br/>shell.jpg.phar]:::payload
-
-    J --> K[Server checks &quot;contains jpg&quot;<br/>not &quot;ends in jpg&quot;]:::ioc
+ 
+    J --> K[Server checks contains jpg<br/>not ends in jpg]:::ioc
     K --> L[RCE as www-data]:::user
     L --> M[Read flag.txt]:::user
-
+ 
     classDef entry fill:#1d4ed8,stroke:#1e3a8a,color:#ffffff;
     classDef ioc fill:#0f766e,stroke:#134e4a,color:#ffffff;
     classDef intel fill:#7c3aed,stroke:#5b21b6,color:#ffffff;
