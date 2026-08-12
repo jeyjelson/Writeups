@@ -45,6 +45,7 @@ My write-ups for the boxes and challenges I've worked through - how I enumerated
 | [Bypassing Client-Side Validation for File Upload Attacks](./HTB%20Bypassing%20Client-Side%20Validation%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | Hack The Box | Easy | Burp Suite, Repeater, PHP web shell, client-side validation bypass, browser dev tools |
 | [Bypassing Blacklisted File Upload Filters](./HTB%20Bypassing%20Blacklisted%20File%20Upload%20Filters%20CTF%20Writeup/README.md) | Hack The Box | Easy | File upload blacklist bypass, Burp Intruder extension fuzzing, PHP webshell, RCE |
 | [Bypassing Whitelist Filters for File Upload Attacks](./HTB%20Bypassing%20Whitelist%20Filters%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | Hack The Box | Medium | File upload bypass, blacklist/whitelist evasion, reverse double extension, Burp Intruder fuzzing, PHP webshell |
+| [Bypassing Type Filters for File Upload Attacks](./HTB%20Bypassing%20Type%20Filters%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | Hack The Box | Medium | Burp Intruder, extension enumeration, GIF8 magic bytes, MIME/Content-Type spoofing, reverse double extension, RCE |
 
 
 ## Defensive Security
