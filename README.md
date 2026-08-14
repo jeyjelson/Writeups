@@ -46,6 +46,7 @@ My write-ups for the boxes and challenges I've worked through - how I enumerated
 | [Bypassing Blacklisted File Upload Filters](./HTB%20Bypassing%20Blacklisted%20File%20Upload%20Filters%20CTF%20Writeup/README.md) | Hack The Box | Easy | File upload blacklist bypass, Burp Intruder extension fuzzing, PHP webshell, RCE |
 | [Bypassing Whitelist Filters for File Upload Attacks](./HTB%20Bypassing%20Whitelist%20Filters%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | Hack The Box | Medium | File upload bypass, blacklist/whitelist evasion, reverse double extension, Burp Intruder fuzzing, PHP webshell |
 | [Bypassing Type Filters for File Upload Attacks](./HTB%20Bypassing%20Type%20Filters%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | Hack The Box | Medium | Burp Intruder, extension enumeration, GIF8 magic bytes, MIME/Content-Type spoofing, reverse double extension, RCE |
+| [File Upload via Path Traversal](./PortSwigger%20File%20Upload%20via%20Path%20Traversal%20CTF%20Writeup/README.md) | PortSwigger | Practitioner | File upload bypass, Path traversal, URL encoding, Burp Repeater, PHP web shell, RCE |
 | [XXE via SVG Upload Against a Secure File Server](./HTB%20XXE%20via%20SVG%20Upload%20Against%20a%20Secure%20File%20Server%20CTF%20Writeup/README.md) | Hack The Box | Easy | Extension enumeration, XXE, SVG external entity, file:// LFI, php://filter base64, source disclosure |
 
 
