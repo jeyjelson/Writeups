@@ -36,26 +36,26 @@ My write-ups for the boxes and challenges I've worked through - how I enumerated
 | [SSTI Exploitation Jinja2 Flask](./HTB%20SSTI%20Exploitation%20Jinja2%20Flask%20CTF%20Writeup/README.md) | HTB Academy | Easy | Jinja2 SSTI, config.items disclosure, __builtins__ enumeration, LFI via open, os.popen RCE |
 | [SSTI Exploitation Twig](./HTB%20SSTI%20Exploitation%20Twig%20CTF%20Writeup/README.md) | HTB Academy | Easy | Twig SSTI, _self enumeration, Symfony file_excerpt LFI, filter+system RCE, path traversal |
 | [Identifying and Exploiting Server-Side Includes Injection](./HTB%20Identifying%20and%20Exploiting%20Server-Side%20Includes%20Injection%20CTF%20Writeup/README.md) | HTB Academy| Easy | SSI injection, .shtml detection, #printenv confirmation, #exec RCE, path traversal |
-| [Identifying and Exploiting an XSLT Injection](./HTB%20Identifying%20and%20Exploiting%20an%20XSLT%20Injection%20CTF%20Writeup/README.md) | Hack The Box | Easy | XSLT injection, system-property fingerprinting, libxslt, php:function, file_get_contents LFI, system() RCE |
+| [Identifying and Exploiting an XSLT Injection](./HTB%20Identifying%20and%20Exploiting%20an%20XSLT%20Injection%20CTF%20Writeup/README.md) | HTB Academy | Easy | XSLT injection, system-property fingerprinting, libxslt, php:function, file_get_contents LFI, system() RCE |
 
 ### File Upload Attacks
 | Box | Platform | Difficulty | Key techniques |
 |-----|----------|------------|----------------|
-| [File Upload Exploitation Using a Web Shell](./HTB%20File%20Upload%20Exploitation%20Using%20a%20Web%20Shell%20Lab%20Writeup/README.md) | Hack The Box Academy | Easy | File upload, PHP web shell, msfvenom, backend fingerprinting, path traversal |
-| [Bypassing Client-Side Validation for File Upload Attacks](./HTB%20Bypassing%20Client-Side%20Validation%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | Hack The Box | Easy | Burp Suite, Repeater, PHP web shell, client-side validation bypass, browser dev tools |
-| [Bypassing Blacklisted File Upload Filters](./HTB%20Bypassing%20Blacklisted%20File%20Upload%20Filters%20CTF%20Writeup/README.md) | Hack The Box | Easy | File upload blacklist bypass, Burp Intruder extension fuzzing, PHP webshell, RCE |
-| [Bypassing Whitelist Filters for File Upload Attacks](./HTB%20Bypassing%20Whitelist%20Filters%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | Hack The Box | Medium | File upload bypass, blacklist/whitelist evasion, reverse double extension, Burp Intruder fuzzing, PHP webshell |
-| [Bypassing Type Filters for File Upload Attacks](./HTB%20Bypassing%20Type%20Filters%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | Hack The Box | Medium | Burp Intruder, extension enumeration, GIF8 magic bytes, MIME/Content-Type spoofing, reverse double extension, RCE |
+| [File Upload Exploitation Using a Web Shell](./HTB%20File%20Upload%20Exploitation%20Using%20a%20Web%20Shell%20Lab%20Writeup/README.md) | HTB Academy Academy | Easy | File upload, PHP web shell, msfvenom, backend fingerprinting, path traversal |
+| [Bypassing Client-Side Validation for File Upload Attacks](./HTB%20Bypassing%20Client-Side%20Validation%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | HTB Academy | Easy | Burp Suite, Repeater, PHP web shell, client-side validation bypass, browser dev tools |
+| [Bypassing Blacklisted File Upload Filters](./HTB%20Bypassing%20Blacklisted%20File%20Upload%20Filters%20CTF%20Writeup/README.md) | HTB Academy | Easy | File upload blacklist bypass, Burp Intruder extension fuzzing, PHP webshell, RCE |
+| [Bypassing Whitelist Filters for File Upload Attacks](./HTB%20Bypassing%20Whitelist%20Filters%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | HTB Academy | Medium | File upload bypass, blacklist/whitelist evasion, reverse double extension, Burp Intruder fuzzing, PHP webshell |
+| [Bypassing Type Filters for File Upload Attacks](./HTB%20Bypassing%20Type%20Filters%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | HTB Academy | Medium | Burp Intruder, extension enumeration, GIF8 magic bytes, MIME/Content-Type spoofing, reverse double extension, RCE |
 | [File Upload via Path Traversal](./PortSwigger%20File%20Upload%20via%20Path%20Traversal%20CTF%20Writeup/README.md) | PortSwigger | Practitioner | File upload bypass, Path traversal, URL encoding, Burp Repeater, PHP web shell, RCE |
-| [XXE via SVG Upload Against a Secure File Server](./HTB%20XXE%20via%20SVG%20Upload%20Against%20a%20Secure%20File%20Server%20CTF%20Writeup/README.md) | Hack The Box | Easy | Extension enumeration, XXE, SVG external entity, file:// LFI, php://filter base64, source disclosure |
-| [File Upload Attacks Skills Assessment](./HTB%20File%20Upload%20Attacks%20Skills%20Assessment%20Writeup/README.md) | Hack The Box | Medium | File upload bypass, Burp Intruder, client-side validation bypass, SVG XXE, php://filter source disclosure, RCE |
+| [XXE via SVG Upload Against a Secure File Server](./HTB%20XXE%20via%20SVG%20Upload%20Against%20a%20Secure%20File%20Server%20CTF%20Writeup/README.md) | HTB Academy | Easy | Extension enumeration, XXE, SVG external entity, file:// LFI, php://filter base64, source disclosure |
+| [File Upload Attacks Skills Assessment](./HTB%20File%20Upload%20Attacks%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Medium | File upload bypass, Burp Intruder, client-side validation bypass, SVG XXE, php://filter source disclosure, RCE |
 
 ## Broken Authentication
 | Box | Platform | Difficulty | Key techniques |
 |-----|----------|------------|----------------|
-| [Username Enumeration](./HTB%20Username%20Enumeration%20CTF%20Writeup/README.md) | Hack The Box | Easy | Username enumeration, ffuf, Burp Suite, error-message analysis |
-| [Brute Forcing Passwords](./HTB%20Brute%20Forcing%20Passwords%20CTF%20Writeup/README.md) | Hack The Box | Easy | Password brute-forcing, ffuf, custom wordlist, Burp Suite |
-| [Brute Forcing 2FA Codes](./HTB%20Brute%20Forcing%202FA%20Codes%20CTF%20Writeup/README.md) | Hack The Box | Easy | 2FA/OTP brute-forcing, ffuf, session cookie, Burp Suite |
+| [Username Enumeration](./HTB%20Username%20Enumeration%20CTF%20Writeup/README.md) | HTB Academy | Easy | Username enumeration, ffuf, Burp Suite, error-message analysis |
+| [Brute Forcing Passwords](./HTB%20Brute%20Forcing%20Passwords%20CTF%20Writeup/README.md) | HTB Academy | Easy | Password brute-forcing, ffuf, custom wordlist, Burp Suite |
+| [Brute Forcing 2FA Codes](./HTB%20Brute%20Forcing%202FA%20Codes%20CTF%20Writeup/README.md) | HTB Academy | Easy | 2FA/OTP brute-forcing, ffuf, session cookie, Burp Suite |
 
 
 ## Defensive Security
