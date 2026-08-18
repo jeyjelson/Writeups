@@ -54,6 +54,7 @@ My write-ups for the boxes and challenges I've worked through - how I enumerated
 | Box | Platform | Difficulty | Key techniques |
 |-----|----------|------------|----------------|
 | [Username Enumeration](./HTB%20Username%20Enumeration%20CTF%20Writeup/README.md) | Hack The Box | Easy | Username enumeration, ffuf, Burp Suite, error-message analysis |
+| [Brute Forcing Passwords](./HTB%20Brute%20Forcing%20Passwords%20CTF%20Writeup/README.md) | Hack The Box | Easy | Password brute-forcing, ffuf, custom wordlist, Burp Suite |
 
 
 ## Defensive Security
