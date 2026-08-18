@@ -45,7 +45,6 @@ flowchart LR
 - Capturing a login POST request in Burp Suite so the exact request format can be reused for fuzzing.
 - Using ffuf to fuzz a POST body and automate the enumeration against a wordlist.
 - Why the `-fr` filter is useful, it lets me drop every response that returns the invalid-user message so only real accounts remain.
-- That a small wording change in an error message is enough to leak whether an account exists.
 
 ---
 
