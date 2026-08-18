@@ -44,7 +44,6 @@ flowchart LR
 - Reading a login's password policy to avoid wasting attempts on invalid passwords.
 - Capturing the login POST in Burp to grab the exact error string.
 - Brute-forcing the password field with ffuf and filtering failures with `-fr`.
-- Spotting the hit by its Status 302 redirect while every failure gets filtered out.
 
 ---
 
