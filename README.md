@@ -50,6 +50,11 @@ My write-ups for the boxes and challenges I've worked through - how I enumerated
 | [XXE via SVG Upload Against a Secure File Server](./HTB%20XXE%20via%20SVG%20Upload%20Against%20a%20Secure%20File%20Server%20CTF%20Writeup/README.md) | Hack The Box | Easy | Extension enumeration, XXE, SVG external entity, file:// LFI, php://filter base64, source disclosure |
 | [File Upload Attacks Skills Assessment](./HTB%20File%20Upload%20Attacks%20Skills%20Assessment%20Writeup/README.md) | Hack The Box | Medium | File upload bypass, Burp Intruder, client-side validation bypass, SVG XXE, php://filter source disclosure, RCE |
 
+## Broken Authentication
+| Box | Platform | Difficulty | Key techniques |
+|-----|----------|------------|----------------|
+| [Username Enumeration](./HTB%20Username%20Enumeration%20CTF%20Writeup/README.md) | Hack The Box | Easy | Username enumeration, ffuf, Burp Suite, error-message analysis |
+
 
 ## Defensive Security
 | Box | Platform | Difficulty | Key techniques |
