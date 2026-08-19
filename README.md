@@ -67,6 +67,7 @@ This repo has write-ups from boxes and labs on Hack The Box, HTB Academy,
 | [Username Enumeration](./HTB%20Username%20Enumeration%20CTF%20Writeup/README.md) | HTB Academy | Easy | Username enumeration, ffuf, Burp Suite, error-message analysis |
 | [Brute Forcing Passwords](./HTB%20Brute%20Forcing%20Passwords%20CTF%20Writeup/README.md) | HTB Academy | Easy | Password brute-forcing, ffuf, custom wordlist, Burp Suite |
 | [Brute Forcing 2FA Codes](./HTB%20Brute%20Forcing%202FA%20Codes%20CTF%20Writeup/README.md) | HTB Academy | Easy | 2FA/OTP brute-forcing, ffuf, session cookie, Burp Suite |
+| [Direct Access via Broken Authentication](./HTB%20Direct%20Access%20via%20Broken%20Authentication%20CTF%20Writeup/README.md) | Hack The Box | Easy | Burp Suite response interception, HTTP 302 to 200 tampering, broken access control |
 
 
 ## Defensive Security
