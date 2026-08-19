@@ -70,6 +70,7 @@ This repo has write-ups from boxes and labs on Hack The Box, HTB Academy,
 | [Direct Access via Broken Authentication](./HTB%20Direct%20Access%20via%20Broken%20Authentication%20CTF%20Writeup/README.md) | Hack The Box | Easy | Burp Suite response interception, HTTP 302 to 200 tampering, broken access control |
 | [Authentication Bypass via Parameter Modification (IDOR)](./HTB%20Authentication%20Bypass%20via%20Parameter%20Modification%20IDOR%20CTF%20Writeup/README.md) | Hack The Box | Easy | IDOR / broken access control, Burp Intruder enumeration, ffuf fuzzing, seq wordlist generation |
 | [Attacking Session Tokens](./HTB%20Attacking%20Session%20Tokens%20CTF%20Writeup/README.md) | Hack The Box | Easy | Session token tampering, hex decode/encode with xxd, cookie forgery, privilege escalation |
+| [Broken Authentication Skills Assessment](./HTB%20Broken%20Authentication%20Skills%20Assessment%20Writeup/README.md) | Hack The Box Academy | Medium | Username enumeration, ffuf brute forcing, custom wordlist, 2FA bypass, Burp response interception |
 
 
 ## Defensive Security
