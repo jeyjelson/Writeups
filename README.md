@@ -1,5 +1,16 @@
 # Security Lab & CTF Write-Ups
-My write-ups for the boxes and challenges I've worked through - how I enumerated, what I exploited, and how I got root. Each one walks through the full process with screenshots and an attack-path diagram.
+This repo has write-ups from boxes and labs on Hack The Box, HTB Academy,
+ PortSwigger, and TryHackMe, plus real engagements I've done outside of labs. It
+  covers offensive security work like web app exploitation, injection attacks,
+  and breaking authentication, alongside defensive security and some AI security
+  too. It's basically a running log of what I've learned and how I approach a
+  target.
+
+  Every write-up follows roughly the same format: how I found and figured out the
+  target, where the actual weakness was, how I got past whatever was blocking
+  me, and how I turned that into real access or proof of impact. Each one has
+  screenshots and a diagram of the attack path, so it's easy to follow the
+  reasoning even if you weren't the one doing it.
 
 ## Offensive Security
 
