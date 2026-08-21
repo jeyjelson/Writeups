@@ -76,6 +76,7 @@ This repo has write-ups from boxes and labs on Hack The Box, HTB Academy,
 | Box | Platform | Difficulty | Key techniques |
 |-----|----------|------------|----------------|
 | [Local File Inclusion](./HTB%20Local%20File%20Inclusion%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, path traversal, /etc/passwd user enumeration |
+| [Bypassing Multiple Filters](./HTB%20Bypassing%20Multiple%20Filters%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, filter bypass, ....// traversal, approved-path prefix |
 
 
 ## Defensive Security
