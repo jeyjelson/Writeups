@@ -72,6 +72,11 @@ This repo has write-ups from boxes and labs on Hack The Box, HTB Academy,
 | [Attacking Session Tokens](./HTB%20Attacking%20Session%20Tokens%20CTF%20Writeup/README.md) | Hack The Box | Easy | Session token tampering, hex decode/encode with xxd, cookie forgery, privilege escalation |
 | [Broken Authentication Skills Assessment](./HTB%20Broken%20Authentication%20Skills%20Assessment%20Writeup/README.md) | Hack The Box Academy | Medium | Username enumeration, ffuf brute forcing, custom wordlist, 2FA bypass, Burp response interception |
 
+## File Inclusion
+| Box | Platform | Difficulty | Key techniques |
+|-----|----------|------------|----------------|
+| [Local File Inclusion](./HTB%20Local%20File%20Inclusion%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, path traversal, /etc/passwd user enumeration |
+
 
 ## Defensive Security
 | Box | Platform | Difficulty | Key techniques |
