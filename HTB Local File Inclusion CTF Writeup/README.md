@@ -41,7 +41,6 @@ flowchart LR
 - Using `../../../../` to climb to the filesystem root before naming the file I actually wanted.
 - Reading `/etc/passwd` to enumerate the users on the system, which gave up the account `barry`.
 - Reaching outside the web root to pull `/usr/share/flags/flag.txt` and capture the flag.
-- That the verbose errors, left on here for learning, would be turned off in a real deployment so an attacker gets no such hints.
 
 ---
 
