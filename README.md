@@ -1,5 +1,5 @@
 # Security Lab & CTF Write-Ups
-This repo has write-ups from boxes and labs on Hack The Box, HTB Academy,
+This repo has write-ups from boxes and labs on Hack the Box, HTB Academy,
  PortSwigger, and TryHackMe, plus real engagements I've done outside of labs. It
   covers offensive security work like web app exploitation, injection attacks,
   and breaking authentication, alongside defensive security and some AI security
@@ -67,16 +67,16 @@ This repo has write-ups from boxes and labs on Hack The Box, HTB Academy,
 | [Username Enumeration](./HTB%20Username%20Enumeration%20CTF%20Writeup/README.md) | HTB Academy | Easy | Username enumeration, ffuf, Burp Suite, error-message analysis |
 | [Brute Forcing Passwords](./HTB%20Brute%20Forcing%20Passwords%20CTF%20Writeup/README.md) | HTB Academy | Easy | Password brute-forcing, ffuf, custom wordlist, Burp Suite |
 | [Brute Forcing 2FA Codes](./HTB%20Brute%20Forcing%202FA%20Codes%20CTF%20Writeup/README.md) | HTB Academy | Easy | 2FA/OTP brute-forcing, ffuf, session cookie, Burp Suite |
-| [Direct Access via Broken Authentication](./HTB%20Direct%20Access%20via%20Broken%20Authentication%20CTF%20Writeup/README.md) | Hack The Box | Easy | Burp Suite response interception, HTTP 302 to 200 tampering, broken access control |
-| [Authentication Bypass via Parameter Modification (IDOR)](./HTB%20Authentication%20Bypass%20via%20Parameter%20Modification%20IDOR%20CTF%20Writeup/README.md) | Hack The Box | Easy | IDOR / broken access control, Burp Intruder enumeration, ffuf fuzzing, seq wordlist generation |
-| [Attacking Session Tokens](./HTB%20Attacking%20Session%20Tokens%20CTF%20Writeup/README.md) | Hack The Box | Easy | Session token tampering, hex decode/encode with xxd, cookie forgery, privilege escalation |
-| [Broken Authentication Skills Assessment](./HTB%20Broken%20Authentication%20Skills%20Assessment%20Writeup/README.md) | Hack The Box Academy | Medium | Username enumeration, ffuf brute forcing, custom wordlist, 2FA bypass, Burp response interception |
+| [Direct Access via Broken Authentication](./HTB%20Direct%20Access%20via%20Broken%20Authentication%20CTF%20Writeup/README.md) | HTB Academy | Easy | Burp Suite response interception, HTTP 302 to 200 tampering, broken access control |
+| [Authentication Bypass via Parameter Modification (IDOR)](./HTB%20Authentication%20Bypass%20via%20Parameter%20Modification%20IDOR%20CTF%20Writeup/README.md) | HTB Academy | Easy | IDOR / broken access control, Burp Intruder enumeration, ffuf fuzzing, seq wordlist generation |
+| [Attacking Session Tokens](./HTB%20Attacking%20Session%20Tokens%20CTF%20Writeup/README.md) | HTB Academy | Easy | Session token tampering, hex decode/encode with xxd, cookie forgery, privilege escalation |
+| [Broken Authentication Skills Assessment](./HTB%20Broken%20Authentication%20Skills%20Assessment%20Writeup/README.md) | HTB Academy Academy | Medium | Username enumeration, ffuf brute forcing, custom wordlist, 2FA bypass, Burp response interception |
 
 ## File Inclusion
 | Box | Platform | Difficulty | Key techniques |
 |-----|----------|------------|----------------|
-| [Local File Inclusion](./HTB%20Local%20File%20Inclusion%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, path traversal, /etc/passwd user enumeration |
-| [Bypassing Multiple Filters](./HTB%20Bypassing%20Multiple%20Filters%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, filter bypass, ....// traversal, approved-path prefix |
+| [Local File Inclusion](./HTB%20Local%20File%20Inclusion%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, path traversal, /etc/passwd user enumeration |
+| [Bypassing Multiple Filters](./HTB%20Bypassing%20Multiple%20Filters%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, filter bypass, ....// traversal, approved-path prefix |
 
 
 ## Defensive Security
