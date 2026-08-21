@@ -43,7 +43,6 @@ flowchart LR
 - Why a plain `../../../etc/passwd` failed here when it worked on the basic box.
 - Using `....//` so that when the filter strips one `../` a working `../` is still left behind.
 - Chaining that bypass to read `/etc/passwd` and then swapping in `flag.txt` to capture the flag.
-- That naive filters which just strip characters or check a prefix can be defeated by feeding them input that survives the stripping.
 
 ---
 
