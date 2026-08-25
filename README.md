@@ -1,5 +1,5 @@
 # Security Lab & CTF Write-Ups
-This repo has write-ups from boxes and labs on Hack the Box, HTB Academy,
+This repo has write-ups from boxes and labs on HackTheBox , HTB Academy,
  PortSwigger, and TryHackMe, plus real engagements I've done outside of labs. It
   covers offensive security work like web app exploitation, injection attacks,
   and breaking authentication, alongside defensive security and some AI security
@@ -77,8 +77,9 @@ This repo has write-ups from boxes and labs on Hack the Box, HTB Academy,
 |-----|----------|------------|----------------|
 | [Local File Inclusion](./HTB%20Local%20File%20Inclusion%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, path traversal, /etc/passwd user enumeration |
 | [Bypassing Multiple Filters](./HTB%20Bypassing%20Multiple%20Filters%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, filter bypass, ....// traversal, approved-path prefix |
-| [PHP Filters: Source Code Disclosure](./HTB%20PHP%20Filters%20Source%20Code%20Disclosure%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, php://filter, base64 source disclosure, ffuf |
-| [PHP Data Wrapper RCE](./HTB%20PHP%20Data%20Wrapper%20RCE%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI to RCE, data:// wrapper, allow_url_include, php://filter |
+| [PHP Filters: Source Code Disclosure](./HTB%20PHP%20Filters%20Source%20Code%20Disclosure%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, php://filter, base64 source disclosure, ffuf |
+| [PHP Data Wrapper RCE](./HTB%20PHP%20Data%20Wrapper%20RCE%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI to RCE, data:// wrapper, allow_url_include, php://filter |
+| [Remote File Inclusion (RFI) to RCE](./HTB%20Remote%20File%20Inclusion%20RFI%20to%20RCE%20CTF%20Writeup/README.md) | HTB Academy | Easy | RFI, RCE, hosted web shell, python http.server, Burp Repeater |
 
 
 ## Defensive Security
