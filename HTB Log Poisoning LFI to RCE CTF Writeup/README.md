@@ -47,7 +47,7 @@ flowchart LR
 - Poisoning the session by setting the `language` parameter, since its value gets written into my own session file.
 - Injecting URL-encoded PHP into the session so that including the session file executes it as code.
 - Fingerprinting the server as Apache so I knew the log lived at `/var/log/apache2/access.log`.
-- Using Burp to plant a PHP payload in the `User-Agent` header, which Apache writes verbatim into its log.
+- Using Burp to plant a PHP payload in the `User-Agent` header, which Apache writes the payload into its log.
 - Reading that poisoned log through the LFI to execute the payload and reach the root flag.
 
 ---
