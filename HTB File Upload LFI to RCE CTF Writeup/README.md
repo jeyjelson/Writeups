@@ -44,7 +44,7 @@ flowchart LR
 
 ## What I Learned
 
-- How to smuggle PHP into an image by prepending the `GIF8` magic bytes so the upload passes the MIME filter.
+- How to insert PHP into an image by prepending the `GIF8` magic bytes so the upload passes the MIME filter.
 - Building a `.gif` web shell that the server stores but that runs as PHP once it is included.
 - Inspecting the page source to work out where uploaded profile images are stored on the server.
 - Confirming the upload landed by requesting `profile_images/shell.gif` directly in the browser.
