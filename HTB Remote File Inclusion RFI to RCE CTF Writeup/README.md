@@ -75,7 +75,9 @@ index.php?language=http://127.0.0.1:80/index.php
 
 ![The page including itself recursively, History rendered inside History](images/02-rfi-recursive-confirm.png)
 
-*Figure 2 - The page includes itself, producing a recursive render inside the History section. This confirms RFI, and shows `http://` is not blocked by the firewall, so we do not need `ftp://` or other options.*
+*Figure 2 - confirming rfi
+
+The page includes itself, producing a recursive render inside the History section. This confirms RFI, and shows `http://` is not blocked by the firewall, so we do not need `ftp://` or other options.*
 
 ---
 
