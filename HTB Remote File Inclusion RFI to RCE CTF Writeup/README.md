@@ -48,12 +48,10 @@ flowchart LR
 
 ## What I Learned
 
-- How to fingerprint the target as Linux/Apache on port 80 by forcing a 404 error.
 - Confirming the RFI by pointing the `language` parameter at the site's own index page and seeing it render recursively.
 - Noting that `http://` was not firewalled, so there was no need to fall back to `ftp://` or SMB.
 - Writing a small PHP web shell and serving it from my own machine with `python3 http.server` on port 4444.
 - Watching the python log for the `GET /shell.php 200` line to confirm the target fetched my shell.
-- Using Burp Repeater to speed up directory hunting and read the flag from the exercise directory.
 
 ---
 
