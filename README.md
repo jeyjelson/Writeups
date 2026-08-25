@@ -80,6 +80,7 @@ This repo has write-ups from boxes and labs on HackTheBox , HTB Academy,
 | [PHP Filters: Source Code Disclosure](./HTB%20PHP%20Filters%20Source%20Code%20Disclosure%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, php://filter, base64 source disclosure, ffuf |
 | [PHP Data Wrapper RCE](./HTB%20PHP%20Data%20Wrapper%20RCE%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI to RCE, data:// wrapper, allow_url_include, php://filter |
 | [Remote File Inclusion (RFI) to RCE](./HTB%20Remote%20File%20Inclusion%20RFI%20to%20RCE%20CTF%20Writeup/README.md) | HTB Academy | Easy | RFI, RCE, hosted web shell, python http.server, Burp Repeater |
+| [File Upload LFI to RCE](./HTB%20File%20Upload%20LFI%20to%20RCE%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, malicious image upload, GIF8 magic bytes, MIME bypass, RCE |
 
 
 ## Defensive Security
