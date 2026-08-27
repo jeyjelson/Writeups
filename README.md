@@ -82,6 +82,7 @@ This repo has write-ups from boxes and labs on HackTheBox , HTB Academy,
 | [Remote File Inclusion (RFI) to RCE](./HTB%20Remote%20File%20Inclusion%20RFI%20to%20RCE%20CTF%20Writeup/README.md) | HTB Academy | Easy | RFI, RCE, hosted web shell, python http.server, Burp Repeater |
 | [File Upload LFI to RCE](./HTB%20File%20Upload%20LFI%20to%20RCE%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, malicious image upload, GIF8 magic bytes, MIME bypass, RCE |
 | [Log Poisoning LFI to RCE](./HTB%20Log%20Poisoning%20LFI%20to%20RCE%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, PHP session poisoning, Apache log poisoning, User-Agent RCE |
+| [Automated LFI Scanning](./HTB%20Automated%20LFI%20Scanning%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, ffuf parameter fuzzing, LFI-Jhaddix wordlist, config/log path enumeration |
 
 
 ## Defensive Security
