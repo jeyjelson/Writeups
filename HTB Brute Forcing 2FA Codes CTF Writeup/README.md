@@ -7,21 +7,6 @@
 > **Author:** Jithin Jelson
 
 ---
-
-## Introduction
-
-We are told that our vulnerable web app asks for an OTP and we are given the password admin and username admin. We have to get in with the 2FA, and we have been told there is no limit to this, so we can start by creating a script between 1-9999 since it is a 4-digit code.
-
-```
-seq -w 0 9999 > tokens.txt
-```
-
-![Generating the token wordlist](images/01-generate-tokens.png)
-
-*Figure 1 - Using seq to generate every 4-digit code from 0000 to 9999 into tokens.txt.*
-
----
-
 ## Assessment Overview
 
 ```mermaid
@@ -51,6 +36,22 @@ flowchart LR
 - The session's `PHPSESSID` cookie has to ride along in the request or every guess is checked against the wrong session.
 
 ---
+
+## Introduction
+
+We are told that our vulnerable web app asks for an OTP and we are given the password admin and username admin. We have to get in with the 2FA, and we have been told there is no limit to this, so we can start by creating a script between 1-9999 since it is a 4-digit code.
+
+```
+seq -w 0 9999 > tokens.txt
+```
+
+![Generating the token wordlist](images/01-generate-tokens.png)
+
+*Figure 1 - Using seq to generate every 4-digit code from 0000 to 9999 into tokens.txt.*
+
+---
+
+
 
 ## Visiting the Web Application
 
