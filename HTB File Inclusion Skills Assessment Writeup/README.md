@@ -170,7 +170,7 @@ Reading `application.php`:
 
 ## Step 5 - Executing the Chain
 
-`contact.php` had a `region` parameter that goes straight into `include()`, with a filter blocking `.` and `/` — but it checks the raw input first, then calls `urldecode()`, then includes. So URL-encoding the dots and slashes (`%2e`, `%2f`) slips past the filter, and `urldecode()` restores them right before `include()` runs. Since `include()` executes PHP, this is our code execution vector.
+`contact.php` had a `region` parameter that goes straight into `include()`, with a filter blocking `.` and `/` - but it checks the raw input first, then calls `urldecode()`, then includes. So URL-encoding the dots and slashes (`%2e`, `%2f`) slips past the filter, and `urldecode()` restores them right before `include()` runs. Since `include()` executes PHP, this is our code execution vector.
 
 Create the shell and calculate its MD5 (which becomes the uploaded filename):
 
@@ -204,11 +204,3 @@ Then read the flag:
 **Answer:** `eedbb78d4800aa45573840ed6bd2d1e3`
 
 ---
-
-## The Full Chain
-
-- **Weakness 1 — read-only LFI in `image.php`** (`file_get_contents`): no execution, but it let us read the source of every file on the server. Without it we never find the other two.
-- **Weakness 2 — broken upload in `application.php`**: zero extension validation plus `md5_file` naming, so we could predict exactly where our shell would land.
-- **Weakness 3 — executing LFI in `contact.php`**: `region` goes into `include()` with a filter bypassable through URL encoding, because the code checks input before decoding it.
-
-The apply form was part of the chain, but the actual execution came from a parameter on a completely different page that is easy to walk past — which is what makes this feel like a real pentest rather than a CTF.
