@@ -63,7 +63,7 @@ We can start by navigating to our webpage on the target IP address.
 Since we have no parameter to work with, we enumerate one using ffuf.
 
 ```
-ffuf -w wordlist.txt -u 'http://154.57.164.82:30427/index.php?FUZZ=value'
+ffuf -w wordlist.txt -u 'http://154.57.164.82:30427/index.phpFUZZ'
 ```
 
 The wordlist we are using is the [top 25 LFI parameters from HackTricks](https://hacktricks.wiki/en/pentesting-web/file-inclusion/index.html#top-25-parameters).
@@ -75,7 +75,7 @@ The wordlist we are using is the [top 25 LFI parameters from HackTricks](https:/
 We can see most of the payloads give a size of 2309, so we filter that out with `-fs 2309`.
 
 ```
-ffuf -w wordlist.txt -u 'http://154.57.164.82:30427/index.php?FUZZ=value' -fs 2309
+ffuf -w wordlist.txt -u 'http://154.57.164.82:30427/index.phpFUZZ' -fs 2309
 ```
 
 ![ffuf with the filter applied, only the view parameter remains](images/03-ffuf-param-fuzz-view-hit.png)
