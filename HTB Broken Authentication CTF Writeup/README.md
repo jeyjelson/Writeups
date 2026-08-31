@@ -1,8 +1,8 @@
 # Hack The Box Academy - Broken Authentication | Write-up
 
-> **Platform:** Hack The Box Academy &nbsp;•&nbsp; **Category:** API / Web &nbsp;•&nbsp; **Difficulty:** Easy
+> **Platform:** Hack The Box Academy &nbsp;•&nbsp; **Category:** API / Web &nbsp;•&nbsp; **Difficulty:** Medium
 >
-> **Target:** `154.57.164.82:30595` (later `154.57.164.82:32245` after a respawn) &nbsp;•&nbsp; **Time taken:** 15 mins
+> **Target:** `154.57.164.82:30595` (later `154.57.164.82:32245` after a respawn) &nbsp;•&nbsp; **Time taken:** 35 mins
 >
 > **Author:** Jithin Jelson
 
