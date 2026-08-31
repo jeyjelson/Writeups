@@ -86,6 +86,11 @@ This repo has write-ups from boxes and labs on HackTheBox , HTB Academy,
 | [File Inclusion Skills Assessment](./HTB%20File%20Inclusion%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Medium | LFI chain, source disclosure, upload bypass, urldecode filter bypass, RCE |
 
 
+### API attacks
+| Box | Platform | Difficulty | Key techniques |
+|-----|----------|------------|----------------|
+| [Broken Object Level Authorization](./HTB%20Broken%20Object%20Level%20Authorization%20CTF%20Writeup/README.md) | Hack The Box Academy | Easy | BOLA / IDOR, Swagger, JWT auth, API enumeration, Bash curl loop |
+
 ## Defensive Security
 | Box | Platform | Difficulty | Key techniques |
 |-----|----------|------------|----------------|
