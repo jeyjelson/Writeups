@@ -51,7 +51,7 @@ flowchart LR
 
 ---
 
-# Part 1 — Excessive Data Exposure
+# Part 1 - Excessive Data Exposure
 
 ## Enumerating Our Access
 
@@ -83,7 +83,7 @@ And we found our flag in the supplier companies endpoint `/api/v1/supplier-compa
 
 ---
 
-# Part 2 — Mass Assignment
+# Part 2 - Mass Assignment
 
 ## Logging In With the Second Account
 
