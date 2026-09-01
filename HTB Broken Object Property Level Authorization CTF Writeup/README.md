@@ -12,7 +12,7 @@
 
 In this exercise we are told that there is Broken Object Property Level Authorization. Since this is a category of vulnerabilities, it encompasses two subclasses, Excessive Data Exposure and Mass Assignment. Therefore in this exercise we have to find a flag for each of the vulnerabilities.
 
-Credentials given: `htbpentester5@hackthebox.com:HTBPentester5` (and a second account for the Mass Assignment stage htbpentester7@hackthebox.com:HTBPentester7).
+Credentials given: `htbpentester5@hackthebox.com:HTBPentester5` (and a second account for the Mass Assignment stage `htbpentester7@hackthebox.com:HTBPentester7`).
 
 ---
 
