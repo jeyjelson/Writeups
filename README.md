@@ -92,6 +92,7 @@ This repo has write-ups from boxes and labs on HackTheBox , HTB Academy,
 | [Broken Object Level Authorization](./HTB%20Broken%20Object%20Level%20Authorization%20CTF%20Writeup/README.md) | Hack The Box Academy | Easy | BOLA / IDOR, Swagger, JWT auth, API enumeration, Bash curl loop |
 | [Broken Authentication](./HTB%20Broken%20Authentication%20CTF%20Writeup/README.md) | Hack The Box Academy | Intermediate | OTP brute-force, ffuf, password-reset abuse, weak password policy, account takeover |
 | [Broken Object Property Level Authorization](./HTB%20Broken%20Object%20Property%20Level%20Authorization%20CTF%20Writeup/README.md) | Hack The Box Academy | Easy | Excessive data exposure, mass assignment, API enumeration, order tampering |
+| [Unrestricted Resource Consumption](./HTB%20Unrestricted%20Resource%20Consumption%20CTF%20Writeup/README.md) | Hack The Box | Easy | Web API attacks, Unrestricted Resource Consumption, JWT auth, no rate limiting, bash/curl scripting |
 
 ## Defensive Security
 | Box | Platform | Difficulty | Key techniques |
