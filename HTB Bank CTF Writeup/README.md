@@ -43,10 +43,10 @@ flowchart LR
 
 ## What I Learned
 
-- How I learned to use Python spawn to generate a web shell for the first time.
-- Catching a reverse shell on a neat listener, though usually the flag is just in the web shell so there is no need to catch a reverse shell.
-- The match and replace trick on Burp Suite.
-- Doing Linux privilege escalation with help from IppSec videos.
+- Leveraged Python's `pty.spawn()` to upgrade a raw `www-data` web shell into a fully interactive TTY for the first time, gaining job control and proper terminal handling.
+- Established a reverse shell to a netcat listener, while noting the target flag was directly retrievable through the web shell, making the callback unnecessary in this case.
+- Abused Burp Suite's Match and Replace rules to rewrite HTTP `302 Found` responses to `200 OK`, defeating the server-side redirect and forcing the hidden support endpoint and its file upload form to render client-side.
+- Performed Linux privilege escalation by identifying and exploiting a world-writable `/etc/passwd`, injecting a crafted root entry, with reference to IppSec's methodology.
 
 ---
 
