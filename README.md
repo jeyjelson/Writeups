@@ -60,6 +60,7 @@ This repo has write-ups from boxes and labs on HackTheBox , HTB Academy,
 | [File Upload via Path Traversal](./PortSwigger%20File%20Upload%20via%20Path%20Traversal%20CTF%20Writeup/README.md) | PortSwigger | Practitioner | File upload bypass, Path traversal, URL encoding, Burp Repeater, PHP web shell, RCE |
 | [XXE via SVG Upload Against a Secure File Server](./HTB%20XXE%20via%20SVG%20Upload%20Against%20a%20Secure%20File%20Server%20CTF%20Writeup/README.md) | HTB Academy | Easy | Extension enumeration, XXE, SVG external entity, file:// LFI, php://filter base64, source disclosure |
 | [File Upload Attacks Skills Assessment](./HTB%20File%20Upload%20Attacks%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Medium | File upload bypass, Burp Intruder, client-side validation bypass, SVG XXE, php://filter source disclosure, RCE |
+| [Bank](./HTB%20Bank%20CTF%20Writeup/README.md) | Hack The Box | Easy | Vhost enumeration, ffuf, Burp match/replace, file upload bypass, writable /etc/passwd privesc |
 
 ## Broken Authentication
 | Box | Platform | Difficulty | Key techniques |
