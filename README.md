@@ -84,6 +84,7 @@ This repo has write-ups from boxes and labs on HackTheBox , HTB Academy,
 | [Log Poisoning LFI to RCE](./HTB%20Log%20Poisoning%20LFI%20to%20RCE%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, PHP session poisoning, Apache log poisoning, User-Agent RCE |
 | [Automated LFI Scanning](./HTB%20Automated%20LFI%20Scanning%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, ffuf parameter fuzzing, LFI-Jhaddix wordlist, config/log path enumeration |
 | [File Inclusion Skills Assessment](./HTB%20File%20Inclusion%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Medium | LFI chain, source disclosure, upload bypass, urldecode filter bypass, RCE |
+| [Beep](./HTB%20Beep%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, Elastix/FreePBX graph.php, amportal.conf disclosure, credential reuse, SSH legacy kex, root |
 
 
 ### API attacks
