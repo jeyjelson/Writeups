@@ -43,12 +43,10 @@ flowchart LR
 
 ## What I Learned
 
-- How to spot a virtual host that isn't advertised anywhere and add it to `/etc/hosts` so the real application loads.
-- Using ffuf to fuzz for hidden `.php` endpoints once I knew the app was written in PHP.
-- Why a 302 redirect doesn't always hide the page content, and how a Burp match/replace rule that turns 302 into 200 exposes it.
-- Bypassing an image-only upload filter with `GIF8a` magic bytes and a debug-only `.htb` extension that the server still executed as PHP.
-- Turning that upload into command execution, then a full reverse shell, and stabilising it with a Python PTY.
-- That a world-writable `/etc/passwd` is game over, because adding a root line with a known password hash hands over root.
+- How I learned to use Python spawn to generate a web shell for the first time.
+- Catching a reverse shell on a neat listener, though usually the flag is just in the web shell so there is no need to catch a reverse shell.
+- The match and replace trick on Burp Suite.
+- Doing Linux privilege escalation with help from IppSec videos.
 
 ---
 
