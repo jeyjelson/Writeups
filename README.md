@@ -1,109 +1,110 @@
-# Hack The Box - Brute Forcing Passwords | Write-up
+# Security Lab & CTF Write-Ups
 
-> **Platform:** Hack The Box &nbsp;•&nbsp; **Category:** Web / Broken Authentication &nbsp;•&nbsp; **Difficulty:** Easy
->
-> **Target:** `154.57.164.76:31552` &nbsp;•&nbsp; **Time taken:** 10 mins
->
-> **Author:** Jithin Jelson
+This repo has write-ups from boxes and labs on HackTheBox, HTB Academy, PortSwigger, and TryHackMe, plus real engagements I've done outside of labs. It covers offensive security work like web app exploitation, injection attacks, and breaking authentication, alongside defensive security and some AI security too. It's basically a running log of what I've learned and how I approach a target.
 
----
+Every write-up follows roughly the same format: how I found and figured out the target, where the actual weakness was, how I got past whatever was blocking me, and how I turned that into real access or proof of impact. Each one has screenshots and a diagram of the attack path, so it's easy to follow the reasoning even if you weren't the one doing it.
 
-## Introduction
-
-We have been told that we have a vulnerable application that allows for passwords to be bruteforced with a valid credential (admin). We have to visit the target IP address and find the valid password using rockyou.txt.
+The full boxes/machines I rooted end to end are grouped under **HTB Labs**. Everything else is organised by vulnerability topic further down.
 
 ---
 
-## Assessment Overview
+# HTB Labs
 
-```mermaid
-flowchart LR
-    A[Login page<br/>password policy<br/>154.57.164.76:31552]:::entry
-    A --> B[Build custom wordlist<br/>grep rockyou by policy]:::intel
-    B --> C[Permission denied<br/>retry elsewhere]:::ioc
-    A --> D[Capture POST<br/>in Burp Suite]:::intel
-    D --> E[Error string<br/>Invalid username or password]:::ioc
-    C --> F[ffuf POST fuzz<br/>password=FUZZ + -fr filter]:::payload
-    E --> F
-    F --> G[Password found<br/>Ramirez120992<br/>Status 302]:::mitre
+Full boxes/machines from HackTheBox and TryHackMe, rooted end to end.
 
-    classDef entry fill:#1d4ed8,stroke:#1e3a8a,color:#ffffff;
-    classDef ioc fill:#0f766e,stroke:#134e4a,color:#ffffff;
-    classDef intel fill:#7c3aed,stroke:#5b21b6,color:#ffffff;
-    classDef mitre fill:#b45309,stroke:#78350f,color:#ffffff;
-    classDef payload fill:#be123c,stroke:#881337,color:#ffffff;
-    classDef user fill:#15803d,stroke:#14532d,color:#ffffff;
-    linkStyle default stroke-width:2px
-```
+| Box | Platform | Category | Difficulty | Key techniques |
+|-----|----------|----------|------------|----------------|
+| [Headless](./HTB%20Labs/HTB%20Headless%20CTF%20Writeup/README.md) | HTB Labs | XSS | Easy | Header-based XSS, blind XSS cookie theft, command injection, relative-path privilege escalation |
+| [Recruit](./HTB%20Labs/THM%20Recruit%20CTF%20Writeup/README.md) | TryHackMe | Injection | Intermediate | Enumeration, LFI, SQL injection |
+| [Validation](./HTB%20Labs/HTB%20Validation%20CTF%20writeup/README.md) | HTB Labs | Injection | Easy | SQL injection, web shell, privilege escalation |
+| [Bank](./HTB%20Labs/HTB%20Bank%20CTF%20Writeup/README.md) | Hack The Box | File Upload | Easy | Vhost enumeration, ffuf, Burp match/replace, file upload bypass, writable /etc/passwd privesc |
+| [Beep](./HTB%20Labs/HTB%20Beep%20CTF%20Writeup/README.md) | HTB Labs | File Inclusion | Easy | LFI, Elastix/FreePBX graph.php, amportal.conf disclosure, credential reuse, SSH legacy kex, root |
+| [ContAInment](./HTB%20Labs/ContAInment%20THM%20CTF%20writeup/README.md) | TryHackMe | AI Security | Intermediate | Phishing analysis, PCAP forensics, prompt injection, LLM exploitation |
 
 ---
 
-## What I Learned
+# Write-Ups by Topic
 
-- Trimming rockyou.txt down to a policy-matching wordlist with chained `grep`.
-- Reading a login's password policy to avoid wasting attempts on invalid passwords.
-- Capturing the login POST in Burp to grab the exact error string.
-- Brute-forcing the password field with ffuf and filtering failures with `-fr`.
-- Spotting the hit by its Status 302 redirect while every failure gets filtered out.
+Guided exercises from HTB Academy and PortSwigger, grouped by vulnerability type.
 
----
+## Offensive Security
 
-## Visiting the Web Application
+### Cross-Site Scripting (XSS)
+| Write-up | Platform | Difficulty | Key techniques |
+|-----|----------|------------|----------------|
+| [XSS Phishing](./Cross-Site%20Scripting%20%28XSS%29/HTB%20XSS%20Phishing%20CTF%20writeup/README.md) | HTB Academy | Intermediate | Cross-site scripting, phishing form injection, credential harvesting |
+| [Session Hijacking](./Cross-Site%20Scripting%20%28XSS%29/HTB%20Session%20Hijacking%20CTF%20writeup/README.md) | HTB Academy | Intermediate | Blind XSS, cookie theft, session hijacking |
+| [XSS Skills Assessment](./Cross-Site%20Scripting%20%28XSS%29/HTB%20XSS%20Skills%20Assessment%20CTF%20writeup/README.md) | HTB Academy | Intermediate | Blind XSS, cookie theft, session hijacking |
 
-First we can visit the web page, when we visit the web page we can see that we are greeted with a password message.
+### Server-Side Request Forgery (SSRF)
+| Write-up | Platform | Difficulty | Key techniques |
+|-----|----------|------------|----------------|
+| [In-Band SSRF Skills Assessment](./Server-Side%20Request%20Forgery%20%28SSRF%29/HTB%20In-Band%20SSRF%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Easy | SSRF, internal port scanning with ffuf, localhost trust abuse |
+| [Basic SSRF Against Another Back-End System](./Server-Side%20Request%20Forgery%20%28SSRF%29/PortSwigger%20Basic%20SSRF%20Against%20Another%20Back-End%20System%20Lab%20Writeup/README.md) | PortSwigger | Apprentice | SSRF, Burp Intruder, internal network scanning, Repeater |
+| [SSRF with Blacklist-Based Input Filter](./Server-Side%20Request%20Forgery%20%28SSRF%29/PortSwigger%20SSRF%20with%20Blacklist-Based%20Input%20Filter%20Lab%20Writeup/README.md) | PortSwigger | Practitioner | SSRF, Burp Repeater, IP obfuscation (127.1 / decimal / octal), case-variation filter bypass |
+| [SSRF with Whitelist-Based Input Filter](./Server-Side%20Request%20Forgery%20%28SSRF%29/PortSwigger%20SSRF%20with%20Whitelist-Based%20Input%20Filter%20Lab%20Writeup/README.md) | PortSwigger | Expert | SSRF, Burp Repeater, URL parser confusion, embedded credentials (user@host), fragment (#) smuggling, double URL encoding (%2523) |
+| [SSRF Enumeration Skills Assessment](./Server-Side%20Request%20Forgery%20%28SSRF%29/HTB%20SSRF%20Enumeration%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Easy | SSRF directory enumeration with ffuf, Apache error filtering, internal admin access |
+| [Blind SSRF with Out-of-Band Detection](./Server-Side%20Request%20Forgery%20%28SSRF%29/PortSwigger%20Blind%20SSRF%20with%20Out-of-Band%20Detection%20Lab%20Writeup/README.md) | PortSwigger Web Security Academy | Practitioner | Blind SSRF, Burp Collaborator, OAST, Referer header injection |
+| [Blind SSRF Enumeration](./Server-Side%20Request%20Forgery%20%28SSRF%29/HTB%20Blind%20SSRF%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Easy | Blind SSRF, dateserver parameter abuse, ffuf port fuzzing, internal loopback enumeration |
+| [SSRF with Filter Bypass via Open Redirection](./Server-Side%20Request%20Forgery%20%28SSRF%29/PortSwigger%20SSRF%20with%20Filter%20Bypass%20via%20Open%20Redirection%20Lab%20Writeup/README.md) | PortSwigger | Practitioner | SSRF, Burp Repeater, open redirect discovery, redirect chaining, internal admin access |
+| [Server-Side Attacks Skills Assessment](./Server-Side%20Request%20Forgery%20%28SSRF%29/HTB%20Server-Side%20Attacks%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Intermediate | SSRF, SSTI, Twig RCE, ffuf, Burp Suite |
 
-![Login page with password policy](images/01-login-password-policy.png)
+### Injection
+| Write-up | Platform | Difficulty | Key techniques |
+|-----|----------|------------|----------------|
+| [Command Injection Skills Assessment](./Injection/HTB%20Command%20Injection%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Easy | Command injection, filter bypass, ${IFS} and ${PATH:0:1} obfuscation, path traversal |
+| [Identifying Template Engine for SSTI](./Injection/HTB%20SSTI%20Template%20Engine%20Identification%20Writeup/README.md) | HTB Academy | Easy | SSTI, template engine fingerprinting, decision-tree payload testing, Twig vs Jinja2 identification |
+| [SSTI Exploitation Jinja2 Flask](./Injection/HTB%20SSTI%20Exploitation%20Jinja2%20Flask%20CTF%20Writeup/README.md) | HTB Academy | Easy | Jinja2 SSTI, config.items disclosure, __builtins__ enumeration, LFI via open, os.popen RCE |
+| [SSTI Exploitation Twig](./Injection/HTB%20SSTI%20Exploitation%20Twig%20CTF%20Writeup/README.md) | HTB Academy | Easy | Twig SSTI, _self enumeration, Symfony file_excerpt LFI, filter+system RCE, path traversal |
+| [Identifying and Exploiting Server-Side Includes Injection](./Injection/HTB%20Identifying%20and%20Exploiting%20Server-Side%20Includes%20Injection%20CTF%20Writeup/README.md) | HTB Academy | Easy | SSI injection, .shtml detection, #printenv confirmation, #exec RCE, path traversal |
+| [Identifying and Exploiting an XSLT Injection](./Injection/HTB%20Identifying%20and%20Exploiting%20an%20XSLT%20Injection%20CTF%20Writeup/README.md) | HTB Academy | Easy | XSLT injection, system-property fingerprinting, libxslt, php:function, file_get_contents LFI, system() RCE |
 
-*Figure 1 - The login page shows a password policy: one upper-case, one lower-case, one digit, minimum 10 characters.*
+### File Upload Attacks
+| Write-up | Platform | Difficulty | Key techniques |
+|-----|----------|------------|----------------|
+| [File Upload Exploitation Using a Web Shell](./File%20Upload%20Attacks/HTB%20File%20Upload%20Exploitation%20Using%20a%20Web%20Shell%20Lab%20Writeup/README.md) | HTB Academy | Easy | File upload, PHP web shell, msfvenom, backend fingerprinting, path traversal |
+| [Bypassing Client-Side Validation for File Upload Attacks](./File%20Upload%20Attacks/HTB%20Bypassing%20Client-Side%20Validation%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | HTB Academy | Easy | Burp Suite, Repeater, PHP web shell, client-side validation bypass, browser dev tools |
+| [Bypassing Blacklisted File Upload Filters](./File%20Upload%20Attacks/HTB%20Bypassing%20Blacklisted%20File%20Upload%20Filters%20CTF%20Writeup/README.md) | HTB Academy | Easy | File upload blacklist bypass, Burp Intruder extension fuzzing, PHP webshell, RCE |
+| [Bypassing Whitelist Filters for File Upload Attacks](./File%20Upload%20Attacks/HTB%20Bypassing%20Whitelist%20Filters%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | HTB Academy | Medium | File upload bypass, blacklist/whitelist evasion, reverse double extension, Burp Intruder fuzzing, PHP webshell |
+| [Bypassing Type Filters for File Upload Attacks](./File%20Upload%20Attacks/HTB%20Bypassing%20Type%20Filters%20for%20File%20Upload%20Attacks%20CTF%20Writeup/README.md) | HTB Academy | Medium | Burp Intruder, extension enumeration, GIF8 magic bytes, MIME/Content-Type spoofing, reverse double extension, RCE |
+| [File Upload via Path Traversal](./File%20Upload%20Attacks/PortSwigger%20File%20Upload%20via%20Path%20Traversal%20CTF%20Writeup/README.md) | PortSwigger | Practitioner | File upload bypass, Path traversal, URL encoding, Burp Repeater, PHP web shell, RCE |
+| [XXE via SVG Upload Against a Secure File Server](./File%20Upload%20Attacks/HTB%20XXE%20via%20SVG%20Upload%20Against%20a%20Secure%20File%20Server%20CTF%20Writeup/README.md) | HTB Academy | Easy | Extension enumeration, XXE, SVG external entity, file:// LFI, php://filter base64, source disclosure |
+| [File Upload Attacks Skills Assessment](./File%20Upload%20Attacks/HTB%20File%20Upload%20Attacks%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Medium | File upload bypass, Burp Intruder, client-side validation bypass, SVG XXE, php://filter source disclosure, RCE |
 
----
+## Broken Authentication
+| Write-up | Platform | Difficulty | Key techniques |
+|-----|----------|------------|----------------|
+| [Username Enumeration](./Broken%20Authentication/HTB%20Username%20Enumeration%20CTF%20Writeup/README.md) | HTB Academy | Easy | Username enumeration, ffuf, Burp Suite, error-message analysis |
+| [Brute Forcing Passwords](./Broken%20Authentication/HTB%20Brute%20Forcing%20Passwords%20CTF%20Writeup/README.md) | HTB Academy | Easy | Password brute-forcing, ffuf, custom wordlist, Burp Suite |
+| [Brute Forcing 2FA Codes](./Broken%20Authentication/HTB%20Brute%20Forcing%202FA%20Codes%20CTF%20Writeup/README.md) | HTB Academy | Easy | 2FA/OTP brute-forcing, ffuf, session cookie, Burp Suite |
+| [Direct Access via Broken Authentication](./Broken%20Authentication/HTB%20Direct%20Access%20via%20Broken%20Authentication%20CTF%20Writeup/README.md) | HTB Academy | Easy | Burp Suite response interception, HTTP 302 to 200 tampering, broken access control |
+| [Authentication Bypass via Parameter Modification (IDOR)](./Broken%20Authentication/HTB%20Authentication%20Bypass%20via%20Parameter%20Modification%20IDOR%20CTF%20Writeup/README.md) | HTB Academy | Easy | IDOR / broken access control, Burp Intruder enumeration, ffuf fuzzing, seq wordlist generation |
+| [Attacking Session Tokens](./Broken%20Authentication/HTB%20Attacking%20Session%20Tokens%20CTF%20Writeup/README.md) | HTB Academy | Easy | Session token tampering, hex decode/encode with xxd, cookie forgery, privilege escalation |
+| [Broken Authentication Skills Assessment](./Broken%20Authentication/HTB%20Broken%20Authentication%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Medium | Username enumeration, ffuf brute forcing, custom wordlist, 2FA bypass, Burp response interception |
 
-## Building a Custom Wordlist
+## File Inclusion
+| Write-up | Platform | Difficulty | Key techniques |
+|-----|----------|------------|----------------|
+| [Local File Inclusion](./File%20Inclusion/HTB%20Local%20File%20Inclusion%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, path traversal, /etc/passwd user enumeration |
+| [Bypassing Multiple Filters](./File%20Inclusion/HTB%20Bypassing%20Multiple%20Filters%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, filter bypass, ....// traversal, approved-path prefix |
+| [PHP Filters: Source Code Disclosure](./File%20Inclusion/HTB%20PHP%20Filters%20Source%20Code%20Disclosure%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, php://filter, base64 source disclosure, ffuf |
+| [PHP Data Wrapper RCE](./File%20Inclusion/HTB%20PHP%20Data%20Wrapper%20RCE%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI to RCE, data:// wrapper, allow_url_include, php://filter |
+| [Remote File Inclusion (RFI) to RCE](./File%20Inclusion/HTB%20Remote%20File%20Inclusion%20RFI%20to%20RCE%20CTF%20Writeup/README.md) | HTB Academy | Easy | RFI, RCE, hosted web shell, python http.server, Burp Repeater |
+| [File Upload LFI to RCE](./File%20Inclusion/HTB%20File%20Upload%20LFI%20to%20RCE%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, malicious image upload, GIF8 magic bytes, MIME bypass, RCE |
+| [Log Poisoning LFI to RCE](./File%20Inclusion/HTB%20Log%20Poisoning%20LFI%20to%20RCE%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, PHP session poisoning, Apache log poisoning, User-Agent RCE |
+| [Automated LFI Scanning](./File%20Inclusion/HTB%20Automated%20LFI%20Scanning%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, ffuf parameter fuzzing, LFI-Jhaddix wordlist, config/log path enumeration |
+| [File Inclusion Skills Assessment](./File%20Inclusion/HTB%20File%20Inclusion%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Medium | LFI chain, source disclosure, upload bypass, urldecode filter bypass, RCE |
 
-We have been told our password has to require a few things, so instead of using the rockyou.txt fully we can grab the passwords that will bypass the requirements.
+### API attacks
+| Write-up | Platform | Difficulty | Key techniques |
+|-----|----------|------------|----------------|
+| [Broken Object Level Authorization](./API%20attacks/HTB%20Broken%20Object%20Level%20Authorization%20CTF%20Writeup/README.md) | Hack The Box Academy | Easy | BOLA / IDOR, Swagger, JWT auth, API enumeration, Bash curl loop |
+| [Broken Authentication](./API%20attacks/HTB%20Broken%20Authentication%20CTF%20Writeup/README.md) | Hack The Box Academy | Intermediate | OTP brute-force, ffuf, password-reset abuse, weak password policy, account takeover |
+| [Broken Object Property Level Authorization](./API%20attacks/HTB%20Broken%20Object%20Property%20Level%20Authorization%20CTF%20Writeup/README.md) | Hack The Box Academy | Easy | Excessive data exposure, mass assignment, API enumeration, order tampering |
+| [Unrestricted Resource Consumption](./API%20attacks/HTB%20Unrestricted%20Resource%20Consumption%20CTF%20Writeup/README.md) | Hack The Box | Easy | Web API attacks, Unrestricted Resource Consumption, JWT auth, no rate limiting, bash/curl scripting |
 
-For this we can write a custom script to extract these types of passwords from rockyou.txt since the original file has over 15 million passwords.
-
-```
-grep '[[:upper:]]' /opt/useful/seclists/Passwords/Leaked-Databases/rockyou.txt | grep '[[:lower:]]' | grep '[[:digit:]]' | grep -E '.{10}' > custom_wordlist.txt
-```
-
-It seems we don't have permission on this device.
-
-![Permission denied when writing the custom wordlist](images/02-permission-denied.png)
-
-*Figure 2 - The custom wordlist command returns "Permission denied".*
-
----
-
-## Capturing the Request in Burp
-
-So we might have to run the whole password list, we can intercept our request on Burp to see what we need.
-
-![Intercepted login request in Burp Suite](images/03-burp-request.png)
-
-*Figure 3 - The intercepted POST request to /index.php, showing the username=admin&password= body parameters.*
-
----
-
-## Brute-Forcing with ffuf
-
-Now we can use ffuf to bruteforce the password in with the correct error message.
-
-![ffuf command and the error message to filter](images/04-ffuf-error-message.png)
-
-*Figure 4 - The wrong-password response returns "Invalid username or password", which becomes our filter string.*
-
-```
-ffuf -w /usr/share/wordlists/rockyou.txt -u http://154.57.164.76:31552/index.php -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "username=admin&password=FUZZ" -fr "Invalid username or password"
-```
-
-![ffuf identifying the valid password](images/05-password-found.png)
-
-*Figure 5 - ffuf filters out the failed attempts and returns the valid password with a Status 302 redirect.*
-
-Note we attempted to do it again in another folder and this time we got our custom wordlist.
-
-> **Question:** What is the password of the user 'admin'?
-
-**Answer:** `Ramirez120992`
+## Defensive Security
+| Write-up | Platform | Difficulty | Key techniques |
+|-----|----------|------------|----------------|
+| [Incident Handling](./Defensive%20Security/HTB%20Incident%20Handling%20Write-up/README.md) | HTB Academy | Easy | TheHive triage, VirusTotal enrichment, MITRE ATT&CK mapping, Base64 PowerShell decoding |
+| [Nessus Vulnerability Assessment](./Defensive%20Security/HTB%20Nessus%20Vulnerability%20Assessment/README.md) | HTB Academy | Easy | Authenticated vulnerability scanning |
