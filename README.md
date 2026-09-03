@@ -23,7 +23,7 @@ Full boxes/machines from HackTheBox and TryHackMe, rooted end to end.
 | [Headless](./HTB%20Headless%20CTF%20Writeup/README.md) | HTB Labs | XSS | Easy | Header-based XSS, blind XSS cookie theft, command injection, relative-path privilege escalation |
 | [Recruit](./THM%20Recruit%20CTF%20Writeup/README.md) | TryHackMe | Injection | Intermediate | Enumeration, LFI, SQL injection |
 | [Validation](./HTB%20Validation%20CTF%20writeup/README.md) | HTB Labs | Injection | Easy | SQL injection, web shell, privilege escalation |
-| [Bank](./HTB%20Bank%20CTF%20Writeup/README.md) | Hack The Box | File Upload | Easy | Vhost enumeration, ffuf, Burp match/replace, file upload bypass, writable /etc/passwd privesc |
+| [Bank](./HTB%20Bank%20CTF%20Writeup/README.md) | HTB Labs | File Upload | Easy | Vhost enumeration, ffuf, Burp match/replace, file upload bypass, writable /etc/passwd privesc |
 | [Beep](./HTB%20Beep%20CTF%20Writeup/README.md) | HTB Labs | File Inclusion | Easy | LFI, Elastix/FreePBX graph.php, amportal.conf disclosure, credential reuse, SSH legacy kex, root |
 | [ContAInment](./ContAInment%20THM%20CTF%20writeup/README.md) | TryHackMe | AI Security | Intermediate | Phishing analysis, PCAP forensics, prompt injection, LLM exploitation |
  
