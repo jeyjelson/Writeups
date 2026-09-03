@@ -88,18 +88,18 @@ Full boxes/machines from HackTheBox and TryHackMe, rooted end to end.
 | [PHP Filters: Source Code Disclosure](./HTB%20PHP%20Filters%20Source%20Code%20Disclosure%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, php://filter, base64 source disclosure, ffuf |
 | [PHP Data Wrapper RCE](./HTB%20PHP%20Data%20Wrapper%20RCE%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI to RCE, data:// wrapper, allow_url_include, php://filter |
 | [Remote File Inclusion (RFI) to RCE](./HTB%20Remote%20File%20Inclusion%20RFI%20to%20RCE%20CTF%20Writeup/README.md) | HTB Academy | Easy | RFI, RCE, hosted web shell, python http.server, Burp Repeater |
-| [File Upload LFI to RCE](./HTB%20File%20Upload%20LFI%20to%20RCE%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, malicious image upload, GIF8 magic bytes, MIME bypass, RCE |
-| [Log Poisoning LFI to RCE](./HTB%20Log%20Poisoning%20LFI%20to%20RCE%20CTF%20Writeup/README.md) | Hack The Box | Easy | LFI, PHP session poisoning, Apache log poisoning, User-Agent RCE |
+| [File Upload LFI to RCE](./HTB%20File%20Upload%20LFI%20to%20RCE%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, malicious image upload, GIF8 magic bytes, MIME bypass, RCE |
+| [Log Poisoning LFI to RCE](./HTB%20Log%20Poisoning%20LFI%20to%20RCE%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, PHP session poisoning, Apache log poisoning, User-Agent RCE |
 | [Automated LFI Scanning](./HTB%20Automated%20LFI%20Scanning%20CTF%20Writeup/README.md) | HTB Academy | Easy | LFI, ffuf parameter fuzzing, LFI-Jhaddix wordlist, config/log path enumeration |
 | [File Inclusion Skills Assessment](./HTB%20File%20Inclusion%20Skills%20Assessment%20Writeup/README.md) | HTB Academy | Medium | LFI chain, source disclosure, upload bypass, urldecode filter bypass, RCE |
  
 ### API attacks
 | Lab | Platform | Difficulty | Key techniques |
 |-----|----------|------------|----------------|
-| [Broken Object Level Authorization](./HTB%20Broken%20Object%20Level%20Authorization%20CTF%20Writeup/README.md) | Hack The Box Academy | Easy | BOLA / IDOR, Swagger, JWT auth, API enumeration, Bash curl loop |
-| [Broken Authentication](./HTB%20Broken%20Authentication%20CTF%20Writeup/README.md) | Hack The Box Academy | Intermediate | OTP brute-force, ffuf, password-reset abuse, weak password policy, account takeover |
-| [Broken Object Property Level Authorization](./HTB%20Broken%20Object%20Property%20Level%20Authorization%20CTF%20Writeup/README.md) | Hack The Box Academy | Easy | Excessive data exposure, mass assignment, API enumeration, order tampering |
-| [Unrestricted Resource Consumption](./HTB%20Unrestricted%20Resource%20Consumption%20CTF%20Writeup/README.md) | Hack The Box | Easy | Web API attacks, Unrestricted Resource Consumption, JWT auth, no rate limiting, bash/curl scripting |
+| [Broken Object Level Authorization](./HTB%20Broken%20Object%20Level%20Authorization%20CTF%20Writeup/README.md) | HTB Academy | Easy | BOLA / IDOR, Swagger, JWT auth, API enumeration, Bash curl loop |
+| [Broken Authentication](./HTB%20Broken%20Authentication%20CTF%20Writeup/README.md) | HTB Academy | Intermediate | OTP brute-force, ffuf, password-reset abuse, weak password policy, account takeover |
+| [Broken Object Property Level Authorization](./HTB%20Broken%20Object%20Property%20Level%20Authorization%20CTF%20Writeup/README.md) | HTB Academy | Easy | Excessive data exposure, mass assignment, API enumeration, order tampering |
+| [Unrestricted Resource Consumption](./HTB%20Unrestricted%20Resource%20Consumption%20CTF%20Writeup/README.md) | HTB Academy | Easy | Web API attacks, Unrestricted Resource Consumption, JWT auth, no rate limiting, bash/curl scripting |
  
 ## Defensive Security
 | Lab | Platform | Difficulty | Key techniques |
