@@ -6,6 +6,12 @@ Every write-up follows roughly the same format: how I found and figured out the 
 
 The full boxes/machines I rooted end to end are grouped under **HTB Labs**. Everything else is organised by vulnerability topic further down.
 
+## Repository Structure
+
+What each folder holds. Each topic folder contains one subfolder per write-up (its `README.md` plus an `images/` folder).
+
+![Repository structure](./structure.svg)
+
 ---
 
 # HTB Labs
