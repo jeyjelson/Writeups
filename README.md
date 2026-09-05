@@ -27,7 +27,7 @@ Full boxes/machines from HackTheBox and TryHackMe, rooted end to end.
 | [Beep](./HTB%20Labs/HTB%20Beep%20CTF%20Writeup/README.md) | HTB Labs | Easy | LFI, Elastix/FreePBX graph.php, amportal.conf disclosure, credential reuse, SSH legacy kex, root |
 | [ContAInment](./HTB%20Labs/ContAInment%20THM%20CTF%20writeup/README.md) | TryHackMe | Intermediate | Phishing analysis, PCAP forensics, prompt injection, LLM exploitation |
 | [Blocky](./HTB%20Labs/HTB%20Blocky%20CTF%20Writeup/README.md) | HTB Labs | Easy | WordPress enumeration, WPScan, JAR/strings credential leak, password reuse, sudo privesc, FTP SSH-key upload, phpMyAdmin hash swap |
-| [Mirai](./HTB%20Mirai%20CTF%20Writeup/README.md) | HTB Labs | Easy | Nmap, ffuf, Pi-hole default creds, SSH, sudo -l privesc, deleted-file recovery with strings |
+| [Mirai](./HTB%20Labs/Mirai%20CTF%20Writeup/README.md) | HTB Labs | Easy | Nmap, ffuf, Pi-hole default creds, SSH, sudo -l privesc, deleted-file recovery with strings |
 
 ---
 
