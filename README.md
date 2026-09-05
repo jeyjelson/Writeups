@@ -20,13 +20,13 @@ Full boxes/machines from HackTheBox and TryHackMe, rooted end to end.
 
 | Box | Platform | Category | Difficulty | Key techniques |
 |-----|----------|----------|------------|----------------|
-| [Headless](./HTB%20Labs/HTB%20Headless%20CTF%20Writeup/README.md) | HTB Labs | XSS | Easy | Header-based XSS, blind XSS cookie theft, command injection, relative-path privilege escalation |
-| [Recruit](./HTB%20Labs/THM%20Recruit%20CTF%20Writeup/README.md) | TryHackMe | Injection | Intermediate | Enumeration, LFI, SQL injection |
-| [Validation](./HTB%20Labs/HTB%20Validation%20CTF%20writeup/README.md) | HTB Labs | Injection | Easy | SQL injection, web shell, privilege escalation |
-| [Bank](./HTB%20Labs/HTB%20Bank%20CTF%20Writeup/README.md) | Hack The Box | File Upload | Easy | Vhost enumeration, ffuf, Burp match/replace, file upload bypass, writable /etc/passwd privesc |
-| [Beep](./HTB%20Labs/HTB%20Beep%20CTF%20Writeup/README.md) | HTB Labs | File Inclusion | Easy | LFI, Elastix/FreePBX graph.php, amportal.conf disclosure, credential reuse, SSH legacy kex, root |
-| [ContAInment](./HTB%20Labs/ContAInment%20THM%20CTF%20writeup/README.md) | TryHackMe | AI Security | Intermediate | Phishing analysis, PCAP forensics, prompt injection, LLM exploitation |
-| [Blocky](./HTB%20Labs/HTB%20Blocky%20CTF%20Writeup/README.md) | Hack The Box | WordPress | Easy | WordPress enumeration, WPScan, JAR/strings credential leak, password reuse, sudo privesc, FTP SSH-key upload, phpMyAdmin hash swap |
+| [Headless](./HTB%20Labs/HTB%20Headless%20CTF%20Writeup/README.md) | HTB Labs | Easy | Header-based XSS, blind XSS cookie theft, command injection, relative-path privilege escalation |
+| [Recruit](./HTB%20Labs/THM%20Recruit%20CTF%20Writeup/README.md) | TryHackMe | Intermediate | Enumeration, LFI, SQL injection |
+| [Validation](./HTB%20Labs/HTB%20Validation%20CTF%20writeup/README.md) | HTB Labs | Easy | SQL injection, web shell, privilege escalation |
+| [Bank](./HTB%20Labs/HTB%20Bank%20CTF%20Writeup/README.md) | Hack The Box | Easy | Vhost enumeration, ffuf, Burp match/replace, file upload bypass, writable /etc/passwd privesc |
+| [Beep](./HTB%20Labs/HTB%20Beep%20CTF%20Writeup/README.md) | HTB Labs | Easy | LFI, Elastix/FreePBX graph.php, amportal.conf disclosure, credential reuse, SSH legacy kex, root |
+| [ContAInment](./HTB%20Labs/ContAInment%20THM%20CTF%20writeup/README.md) | TryHackMe | Intermediate | Phishing analysis, PCAP forensics, prompt injection, LLM exploitation |
+| [Blocky](./HTB%20Labs/HTB%20Blocky%20CTF%20Writeup/README.md) | Hack The Box | Easy | WordPress enumeration, WPScan, JAR/strings credential leak, password reuse, sudo privesc, FTP SSH-key upload, phpMyAdmin hash swap |
 | [Mirai](./HTB%20Mirai%20CTF%20Writeup/README.md) | Hack The Box | Easy | Nmap, ffuf, Pi-hole default creds, SSH, sudo -l privesc, deleted-file recovery with strings |
 
 ---
