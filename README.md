@@ -18,7 +18,7 @@ What each folder holds. Each topic folder contains one subfolder per write-up (i
 
 Full boxes/machines from HackTheBox and TryHackMe, rooted end to end.
 
-| Box | Platform  Difficulty | Key techniques |
+| Box | Platform | Difficulty | Key techniques |
 |-----|----------|------------|----------------|
 | [Headless](./HTB%20Labs/HTB%20Headless%20CTF%20Writeup/README.md) | HTB Labs | Easy | Header-based XSS, blind XSS cookie theft, command injection, relative-path privilege escalation |
 | [Recruit](./HTB%20Labs/THM%20Recruit%20CTF%20Writeup/README.md) | TryHackMe | Intermediate | Enumeration, LFI, SQL injection |
