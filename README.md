@@ -106,10 +106,10 @@ Guided exercises from HTB Academy and PortSwigger, grouped by vulnerability type
 ### API attacks
 | Write-up | Platform | Difficulty | Key techniques |
 |-----|----------|------------|----------------|
-| [Broken Object Level Authorization](./API%20attacks/HTB%20Broken%20Object%20Level%20Authorization%20CTF%20Writeup/README.md) | HTB Labs Academy | Easy | BOLA / IDOR, Swagger, JWT auth, API enumeration, Bash curl loop |
+| [Broken Object Level Authorization](./API%20attacks/HTB%20Broken%20Object%20Level%20Authorization%20CTF%20Writeup/README.md) | HTB Academy | Easy | BOLA / IDOR, Swagger, JWT auth, API enumeration, Bash curl loop |
 | [Broken Authentication](./API%20attacks/HTB%20Broken%20Authentication%20CTF%20Writeup/README.md) | HTB Academy | Intermediate | OTP brute-force, ffuf, password-reset abuse, weak password policy, account takeover |
 | [Broken Object Property Level Authorization](./API%20attacks/HTB%20Broken%20Object%20Property%20Level%20Authorization%20CTF%20Writeup/README.md) | HTB Academy | Easy | Excessive data exposure, mass assignment, API enumeration, order tampering |
-| [Unrestricted Resource Consumption](./API%20attacks/HTB%20Unrestricted%20Resource%20Consumption%20CTF%20Writeup/README.md) | HTB Labs | Easy | Web API attacks, Unrestricted Resource Consumption, JWT auth, no rate limiting, bash/curl scripting |
+| [Unrestricted Resource Consumption](./API%20attacks/HTB%20Unrestricted%20Resource%20Consumption%20CTF%20Writeup/README.md) | HTB Academy | Easy | Web API attacks, Unrestricted Resource Consumption, JWT auth, no rate limiting, bash/curl scripting |
 
 ## Defensive Security
 | Write-up | Platform | Difficulty | Key techniques |
