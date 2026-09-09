@@ -30,7 +30,7 @@ Full boxes/machines from HackTheBox and TryHackMe, rooted end to end.
 | [Mirai](./HTB%20Labs/HTB%20Mirai%20CTF%20Writeup/README.md) | HTB Labs | Easy | Nmap, ffuf, Pi-hole default creds, SSH, sudo -l privesc, deleted-file recovery with strings |
 | [Shocker](./HTB%20Labs/HTB%20Shocker%20CTF%20Writeup/README.md) | HTB Labs | Easy | Shellshock, CGI User-Agent injection, ffuf, full-path RCE, bash /dev/tcp reverse shell, sudo perl privesc |
 | [Sense](./HTB%20Labs/HTB%20Sense%20CTF%20Writeup/README.md) | HTB Labs | Easy | ffuf extension fuzzing, pfSense 2.1.3, CVE-2014-4688 command injection, blind RCE via netcat, printf/env-var blacklist bypass |
-| [Bashed](./HTB%20Labs/HTB%20Bashed%20CTF%20Writeup/README.md) | Hack The Box | Easy | ffuf, phpbash web shell, Python reverse shell, sudo pivot, cron privesc |
+| [Bashed](./HTB%20Labs/HTB%20Bashed%20CTF%20Writeup/README.md) | HTB Labs | Easy | ffuf, phpbash web shell, Python reverse shell, sudo pivot, cron privesc |
 ---
 
 # Write-Ups by Topic
