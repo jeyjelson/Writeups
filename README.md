@@ -32,6 +32,7 @@ Full boxes/machines from HackTheBox and TryHackMe, rooted end to end.
 | [Sense](./HTB%20Labs/HTB%20Sense%20CTF%20Writeup/README.md) | HTB Labs | Easy | ffuf extension fuzzing, pfSense 2.1.3, CVE-2014-4688 command injection, blind RCE via netcat, printf/env-var blacklist bypass |
 | [Bashed](./HTB%20Labs/HTB%20Bashed%20CTF%20Writeup/README.md) | HTB Labs | Easy | ffuf, phpbash web shell, Python reverse shell, sudo pivot, cron privesc |
 | [Nibbles](./HTB%20Labs/HTB%20Nibbles%20CTF%20Writeup/README.md) | HTB Labs | Easy | Nibbleblog arbitrary file upload, PHP reverse shell, pty upgrade, sudo script privesc |
+| [Valentine](./HTB%20Labs/HTB%20Valentine%20CTF%20Writeup/README.md) | HTB Labs | Easy | Heartbleed (CVE-2014-0160), searchsploit, ffuf, RSA key passphrase leak, legacy ssh-rsa |
 ---
 
 # Write-Ups by Topic
