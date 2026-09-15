@@ -14,7 +14,7 @@ What each folder holds. Each topic folder contains one subfolder per write-up (i
 
 ---
 
-# HTB Labs
+# HackTheBox & TryHackMe Labs
 
 Full boxes/machines from HackTheBox and TryHackMe, rooted end to end.
 
