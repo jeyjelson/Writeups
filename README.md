@@ -35,6 +35,7 @@ Full boxes/machines from HackTheBox and TryHackMe, rooted end to end.
 | [Valentine](./HTB%20Labs/HTB%20Valentine%20CTF%20Writeup/README.md) | HTB Labs | Easy | Heartbleed (CVE-2014-0160), searchsploit, ffuf, RSA key passphrase leak, legacy ssh-rsa |
 | [Frolic](./HTB%20Labs/HTB%20Frolic%20CTF%20Writeup/README.md) | HTB Labs | Easy | Node-RED enum, ffuf, JS source disclosure, Ook / Base64 / Brainfuck decode chain, zip2john + John, playSMS 1.4 sendfromfile.php authenticated RCE, ret2libc on SUID binary |
 | [Curling](./HTB%20Labs/HTB%20Curling%20CTF%20Writeup/README.md) | HTB Labs | Easy | Joomla enum, Base64 secret.txt, Protostar template webshell, PentestMonkey mkfifo revshell, MySQL creds from configuration.php, CyberChef Hex+Bzip2+Gzip+Tar decode, curl file:// SSRF |
+| [Teacher](./HTB%20Labs/HTB%20Teacher%20CTF%20Writeup/README.md) | HTB Labs | Easy | Moodle RCE (CVE-2018-1133), ffuf bruteforce, steganography in image files, crontab symlink privesc |
 ---
 
 # Write-Ups by Topic
