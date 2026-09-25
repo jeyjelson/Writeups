@@ -38,6 +38,7 @@ Full boxes/machines from HackTheBox and TryHackMe, rooted end to end.
 | [Teacher](./HTB%20Labs/HTB%20Teacher%20CTF%20Writeup/README.md) | HTB Labs | Easy | Moodle RCE (CVE-2018-1133), ffuf bruteforce, steganography in image files, crontab symlink privesc |
 | [SwagShop](./HTB%20Labs/HTB%20SwagShop%20CTF%20Writeup/README.md) | HTB Labs | Easy | Magento Shoplift SQLi, Post-Auth RCE, vi sudo shell escape |
 | [Writeup](./HTB%20Labs/HTB%20Writeup%20CTF%20Writeup/README.md) | HTB Labs | Easy | CMS Made Simple SQLi (CVE-2019-9053), exiftool version fingerprinting, hashcat, run-parts PATH hijacking |
+| [Networked](./HTB%20Labs/HTB%20Networked%20CTF%20Writeup/README.md) | HTB Labs | Easy | File upload MIME/extension bypass, PHP webshell, cron filename command injection, CentOS ifcfg command injection |
 ---
 
 # Write-Ups by Topic
