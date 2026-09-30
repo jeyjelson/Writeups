@@ -40,6 +40,7 @@ Full boxes/machines from HackTheBox and TryHackMe, rooted end to end.
 | [Writeup](./HTB%20Labs/HTB%20Writeup%20CTF%20Writeup/README.md) | HTB Labs | Easy | CMS Made Simple SQLi (CVE-2019-9053), exiftool version fingerprinting, hashcat, run-parts PATH hijacking |
 | [Networked](./HTB%20Labs/HTB%20Networked%20CTF%20Writeup/README.md) | HTB Labs | Easy | File upload MIME/extension bypass, PHP webshell, cron filename command injection, CentOS ifcfg command injection |
 | [Connected](./HTB%20Labs/) | HTB Labs | Easy | Active machine: will post writeup when machie retires |
+| [Traverxec](./HTB%20Labs/HTB%20Traverxec%20CTF%20Writeup/README.md) | HTB Labs | Easy | nostromo 1.9.6 RCE (CVE-2019-16278), directory traversal, ssh2john, journalctl less pager escape |
 ---
 
 # Write-Ups by Topic
