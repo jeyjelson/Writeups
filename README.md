@@ -129,3 +129,12 @@ Guided exercises from HTB Academy and PortSwigger, grouped by vulnerability type
 |-----|----------|------------|----------------|
 | [Incident Handling](./Defensive%20Security/HTB%20Incident%20Handling%20Write-up/README.md) | HTB Academy | Easy | TheHive triage, VirusTotal enrichment, MITRE ATT&CK mapping, Base64 PowerShell decoding |
 | [Nessus Vulnerability Assessment](./Defensive%20Security/HTB%20Nessus%20Vulnerability%20Assessment/README.md) | HTB Academy | Easy | Authenticated vulnerability scanning |
+
+# CVE Write-Ups
+
+
+| Write-up | CVE | Severity | Class |
+|----------|-----|----------|-------|
+| [PHP2Shell](./HTB%20Labs/PHP2Shell-Report/README.md) | CVE-2026-109618 / 109619 | 9.2 Critical | CWE-824 dangling pointer, pre-auth RCE |
+
+---
