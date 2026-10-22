@@ -1,4 +1,4 @@
-# PHP2Shell — CVE-2026-109618 / CVE-2026-109619
+# PHP2Shell - CVE-2026-109618 / CVE-2026-109619
 
 > A report on the PHP runtime double-vulnerability disclosed on **21 October 2026**, with a working demo against a vulnerable `php:8.4.26-apache` container.
 
@@ -15,7 +15,7 @@
 1. [Overview](#overview)
 2. [The CVEs](#the-cves)
 3. [The feature being abused](#the-feature-being-abused)
-4. [The bug — a bailout that skips cleanup](#the-bug--a-bailout-that-skips-cleanup)
+4. [The bug - a bailout that skips cleanup](#the-bug--a-bailout-that-skips-cleanup)
 5. [Why it isn't harmless](#why-it-isnt-harmless)
 6. [Reconnaissance](#reconnaissance)
 7. [The exploit chain](#the-exploit-chain)
@@ -56,7 +56,7 @@ To switch the feature on, the attacker only has to include a form field named `P
 > **Q.** What is the default name of the form field that switches on PHP's upload-progress tracking?
 > **A.** `PHP_SESSION_UPLOAD_PROGRESS`
 
-## The bug — a bailout that skips cleanup
+## The bug - a bailout that skips cleanup
 
 PHP has a rule: each request can only use so much memory. If a request tries to use more, PHP has to abort. It cannot finish the job and it cannot clean up normally, so it does an emergency jump straight back to a safe point in the code. The engine calls this a **bailout**, implemented in C with `longjmp()`.
 
@@ -96,13 +96,13 @@ From that single flaw researchers built two exploits:
 
 The target is a vulnerable server running in a Docker container listening on `localhost:8088`.
 
-### Step 1 — identify the server
+### Step 1 - identify the server
 
 ![Target container running php:8.4.26-apache](images/03-target-container.png)
 
 The server is running **8.4.26**, one short of the **8.4.27** fix, so it is vulnerable.
 
-### Step 2 — probe the endpoint
+### Step 2 - probe the endpoint
 
 ![curl shows the index just prints OK](images/04-target-index.png)
 
@@ -118,8 +118,8 @@ The result is that the attacker gets about **67 KB of the server's private memor
 
 The attacker does this leak twice:
 
-1. First leak — find where the PHP memory heap starts.
-2. Second leak — find where PHP's main code library (`libphp`) starts.
+1. First leak - find where the PHP memory heap starts.
+2. Second leak - find where PHP's main code library (`libphp`) starts.
 
 Each run of the exploit shows two `[+]` lines holding those two addresses. They look different every time because ASLR is still shuffling them, but the attack just reads them fresh each time instead of guessing.
 
@@ -139,8 +139,8 @@ The leak tells the attacker where everything is. CVE-2026-109619 turns that into
 | # | Request | What it does |
 |---|---------|--------------|
 | 1 | **Rotate** | Crash a worker, fork a fresh one |
-| 2 | **Leak heap** | `Set-Cookie` out-of-bounds read — heap chunk base |
-| 3 | **Leak libphp** | Second leak — ASLR defeated |
+| 2 | **Leak heap** | `Set-Cookie` out-of-bounds read - heap chunk base |
+| 3 | **Leak libphp** | Second leak - ASLR defeated |
 | 4 | **Forge** | Fake `HashTable`, `pDestructor = system` |
 
 Every step is an ordinary multipart POST; the target page only prints `OK`.
@@ -194,12 +194,12 @@ Look for signs in your server logs such as:
 
 ## References
 
-- CVE-2026-109618 — PHP session.upload_progress out-of-bounds read
-- CVE-2026-109619 — PHP session.upload_progress use-after-free RCE
-- CWE-824 — Access of Uninitialized Pointer
+- CVE-2026-109618 - PHP session.upload_progress out-of-bounds read
+- CVE-2026-109619 - PHP session.upload_progress use-after-free RCE
+- CWE-824 - Access of Uninitialized Pointer
 - PHP release notes: 8.5.12, 8.4.27, 8.3.36, 8.2.35
 - TryHackMe room: **PHP2Shell**
 
 ---
 
-*Report compiled by Jithin Jelson — walkthrough of the TryHackMe PHP2Shell room, written up as a vulnerability report.*
+*Report compiled by Jithin Jelson - walkthrough of the TryHackMe PHP2Shell room, written up as a vulnerability report.*
